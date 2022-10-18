@@ -1,28 +1,19 @@
-class Engineer {
-    constructor (name, id, email, github) {
-        this.name = name
-        this.id = id
-        this.email = email
-        this.github
-    }
+const Engineer = require("../lib/engineer")
 
-
-    getName () {
-        return this.name
-    }
-
-    getId () {
-        return this.id
-    }
-
-    getEmail () {
-        return this.email
-    }
-    getGithub () {
-        return this.github
-    }
-
-    getRole() {
-        return "Engineer"
-    }
-}
+test("sets the github account", () => {
+    const variable = "Github";
+    const engineer = new Engineer("Kyle", 27, "parrish.kyle477@gmail.com", variable);
+    expect(engineer.github).toBe(variable);
+  });
+  
+  test("assigns role as engineer", () => {
+    const variable = "Engineer";
+    const engineer = new Engineer("Kyle", 27, "parrish.kyle477@gmail.com", "Github");
+    expect(engineer.getRole()).toBe(variable);
+  });
+  
+  test("gets github user", () => {
+    const variable = "GitHubUser";
+    const engineer = new Engineer("Kyle", 27, "parrish.kyle477@gmail.com", variable);
+    expect(engineer.getGithub()).toBe(variable);
+  });
