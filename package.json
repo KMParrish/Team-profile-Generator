@@ -5,7 +5,7 @@
   "main": "index.js",
   "directories": {
     "lib": "lib",
-    "test": "jest"
+    "test": "tests"
   },
   "scripts": {
     "test": "jest"
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/KMParrish/Team-profile-Generator#readme",
   "devDependencies": {
     "jest": "^29.2.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
